@@ -19,7 +19,7 @@ h1 {
   font-size: 6rem;
   letter-spacing: 0.2rem;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 button {
@@ -36,4 +36,17 @@ button {
 
 button:hover {
   background: #477890;
+}
+
+/* Cards */
+img {
+  width: 85%;
+}
+
+.card-grid {
+  margin: 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em 1em;
+  cursor: grab;
 }
