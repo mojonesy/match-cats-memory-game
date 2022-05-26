@@ -14,25 +14,65 @@ import ragamuffin from "../cat-photos/ragamuffin.jpg"
 import ragdoll from "../cat-photos/ragdoll.jpg"
 import russianblue from "../cat-photos/russianblue.jpg"
 
-const cardImages = [abyssinian, birman, chantilly, chartreux, devonrex, mainecoon, manx, ragamuffin, ragdoll, russianblue];
+const cardImages = [
+  { src: abyssinian, matched: false },
+  { src: birman, matched: false },
+  { src: chantilly, matched: false },
+  { src: chartreux, matched: false },
+  { src: devonrex, matched: false },
+  { src: mainecoon, matched: false },
+  { src: manx, matched: false },
+  { src: ragamuffin, matched: false },
+  { src: ragdoll, matched: false },
+  { src: russianblue, matched: false }
+];
 
 function Home() {
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
+  const [choiceOne, setChoiceOne] = useState(null);
+  const [choiceTwo, setChoiceTwo] = useState(null);
 
   // Shuffle cards
   const shuffleCards = () => {
     const shuffled = [...cardImages, ...cardImages]
       shuffled.sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
-
+    
     setCards(shuffled)
     setTurns(0)
   }
-  // Set home view
+  // Set new game
   useEffect(() => {
     shuffleCards();
   }, []);
+
+  // Handle a choice
+  const handleChoice = (card) => {
+    // If choiceOne is not null, setChoiceTwo. If it is null, setChoiceOne
+    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+  }
+
+  // Compare two selected cards
+  useEffect(() => {
+    if(choiceOne && choiceTwo) {
+      if(choiceOne === choiceTwo) {
+        console.log('matching');
+        resetTurn();
+      } else {
+        console.log('not a match');
+        resetTurn();
+      }
+    }
+  }, [choiceOne, choiceTwo])
+
+  // Reset choices & increase turn
+  const resetTurn = () => {
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setTurns(prevTurns => prevTurns + 1);
+  }
+
 
   return (
     <>
@@ -44,8 +84,9 @@ function Home() {
           return (
             <SingleCard
               key={card.id} 
-              card={card} 
-              cover={cover} 
+              card={card.src} 
+              cover={cover}
+              handleChoice={handleChoice} 
             />
           );
         })}
