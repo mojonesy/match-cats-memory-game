@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Home.css';
 // Images
 import cover from "./cat-photos/match_cat_cover.png";
-import abyssinian from "./cat-photos/abyssinian.jpg";
+import abyssinian from "./cat-photos/abyssinian.png";
 import birman from "./cat-photos/birman.jpg"
 import chantilly from "./cat-photos/chantilly.jpg"
 import chartreux from "./cat-photos/chartreux.jpg"
