@@ -42,7 +42,7 @@ function Home() {
     setCards(shuffled)
     setTurns(0)
   }
-  // Set new game
+  // Set new game on home load
   useEffect(() => {
     shuffleCards();
   }, []);
@@ -56,15 +56,26 @@ function Home() {
   // Compare two selected cards
   useEffect(() => {
     if(choiceOne && choiceTwo) {
-      if(choiceOne === choiceTwo) {
-        console.log('matching');
+
+      if(choiceOne.src === choiceTwo.src) {
+        console.log("matched.");
+        setCards(prevCards => {
+          return prevCards.map(card => {
+            if (card.src === choiceOne.src) {
+              return {...card, matched: true}
+            } else {
+              return card;
+            }
+          })
+        })
         resetTurn();
       } else {
-        console.log('not a match');
+        
         resetTurn();
       }
     }
   }, [choiceOne, choiceTwo])
+  console.log(cards);
 
   // Reset choices & increase turn
   const resetTurn = () => {
