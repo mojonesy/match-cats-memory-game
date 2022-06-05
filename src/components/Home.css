@@ -22,6 +22,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+p {
+  font-size: 1.5em;
+  color: #dea6bc;
+}
+
 button {
   font-family: 'Fira Sans', sans-serif;
   font-size: 1.5rem;
