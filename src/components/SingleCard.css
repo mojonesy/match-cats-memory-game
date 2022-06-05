@@ -7,3 +7,26 @@
     border: 10px solid #56334f;
     border-radius: 8px;
 }
+
+/* front of card (picture) */
+.card .front {
+    transform: rotateY(90deg);
+    transition: all ease-in 0.3s;
+    position: absolute;
+}
+
+.flipped .front {
+    transform: rotateY(0deg);
+    transition-delay: 0.05s;
+}
+
+/* back of card (cover) */
+.card .back {
+    transform: all ease-in 0.3s;
+    transition-delay: 0.35s;
+}
+
+.flipped .back {
+    transform: rotateY(90deg);
+    transition-delay: 0.05s;
+}
