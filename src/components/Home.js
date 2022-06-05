@@ -28,10 +28,12 @@ function Home() {
   const shuffleCards = () => {
     const shuffled = [...cardImages, ...cardImages]
       .sort(() => Math.random() - 0.5)
-      .map((card) => ({ ...card, id: Math.random() }))
+      .map((card) => ({ ...card, id: Math.random() }));
     
-    setCards(shuffled)
-    setTurns(0)
+    setChoiceOne(null);
+    setChoiceTwo(null);
+    setCards(shuffled);
+    setTurns(0);
   }
   // Set new game on home load
   useEffect(() => {
@@ -47,7 +49,7 @@ function Home() {
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true)
-      
+
       if (choiceOne.src === choiceTwo.src) {
         console.log('matched.')
         setCards(prevCards => {
@@ -83,7 +85,7 @@ function Home() {
     <>
       <h1>Match Cats!</h1>
       <button onClick={shuffleCards}>New Game</button>
-    
+      <p>Turns: {turns}</p>
       <div className="card-grid">
         {cards.map((card, i) => {
           return (
