@@ -1,30 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import SingleCard from './SingleCard';
 import './Home.css';
-// Images
-import cover from "../cat-photos/match_cat_cover.png";
-import abyssinian from "../cat-photos/abyssinian.png";
-import birman from "../cat-photos/birman.jpg"
-import chantilly from "../cat-photos/chantilly.jpg"
-import chartreux from "../cat-photos/chartreux.jpg"
-import devonrex from "../cat-photos/devonrex.png"
-import mainecoon from "../cat-photos/mainecoon.jpg"
-import manx from "../cat-photos/manx.jpg"
-import ragamuffin from "../cat-photos/ragamuffin.jpg"
-import ragdoll from "../cat-photos/ragdoll.jpg"
-import russianblue from "../cat-photos/russianblue.jpg"
 
+// Images
+const cover = './images/match_cat_cover.png';
 const cardImages = [
-  { src: abyssinian, matched: false },
-  { src: birman, matched: false },
-  { src: chantilly, matched: false },
-  { src: chartreux, matched: false },
-  { src: devonrex, matched: false },
-  { src: mainecoon, matched: false },
-  { src: manx, matched: false },
-  { src: ragamuffin, matched: false },
-  { src: ragdoll, matched: false },
-  { src: russianblue, matched: false }
+  { "src": './images/abyssinian.png', matched: false },
+  { "src": './images/birman.jpg', matched: false },
+  { "src": './images/chantilly.jpg', matched: false },
+  { "src": './images/chartreux.jpg', matched: false },
+  { "src": './images/devonrex.png', matched: false },
+  { "src": './images/mainecoon.jpg', matched: false },
+  { "src": './images/manx.jpg', matched: false },
+  { "src": './images/ragamuffin.jpg', matched: false },
+  { "src": './images/ragdoll.jpg', matched: false },
+  { "src": './images/russianblue.jpg', matched: false }
 ];
 
 function Home() {
@@ -36,7 +26,7 @@ function Home() {
   // Shuffle cards
   const shuffleCards = () => {
     const shuffled = [...cardImages, ...cardImages]
-      shuffled.sort(() => Math.random() - 0.5)
+      .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }))
     
     setCards(shuffled)
@@ -49,33 +39,33 @@ function Home() {
 
   // Handle a choice
   const handleChoice = (card) => {
-    // If choiceOne is not null, setChoiceTwo. If it is null, setChoiceOne
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   }
 
-  // Compare two selected cards
+  // Compare two selected cards. Wait 1.5s before turning back over if they do not match.
   useEffect(() => {
-    if(choiceOne && choiceTwo) {
-
-      if(choiceOne.src === choiceTwo.src) {
-        console.log("matched.");
+    if (choiceOne && choiceTwo) {
+      if (choiceOne.src === choiceTwo.src) {
+        console.log('matched.')
         setCards(prevCards => {
           return prevCards.map(card => {
             if (card.src === choiceOne.src) {
-              return {...card, matched: true}
+              return { ...card, matched: true };
             } else {
               return card;
             }
           })
-        })
+        });
         resetTurn();
       } else {
-        
-        resetTurn();
+        console.log('not matched.')
+        setTimeout(() => {
+          resetTurn();
+        }, 1050);
       }
     }
-  }, [choiceOne, choiceTwo])
-  console.log(cards);
+  }, [choiceOne, choiceTwo]);
+  // console.log(cards);
 
   // Reset choices & increase turn
   const resetTurn = () => {
@@ -91,13 +81,14 @@ function Home() {
       <button onClick={shuffleCards}>New Game</button>
     
       <div className="card-grid">
-        {cards.map(card => {
+        {cards.map((card, i) => {
           return (
             <SingleCard
-              key={card.id} 
-              card={card.src} 
+              key={i} 
+              card={card} 
               cover={cover}
               handleChoice={handleChoice} 
+              flipped={ card === choiceOne || card === choiceTwo || card.matched === true }
             />
           );
         })}
