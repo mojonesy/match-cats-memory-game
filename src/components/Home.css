@@ -16,23 +16,25 @@ body {
 
 h1 {
   font-family: 'Square Peg', sans-serif;
-  font-size: 6rem;
+  font-size: 3rem;
   letter-spacing: 0.2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 5px;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1em;
   color: #dea6bc;
+  margin: 10px;
 }
 
 button {
   font-family: 'Fira Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #EEF0EB;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   background: #4C86A8;
@@ -45,13 +47,76 @@ button:hover {
 
 /* Cards */
 img {
-  width: 85%;
+  width: 75%;
 }
 
 .card-grid {
-  margin: 80px 80px;
+  margin: 10px 10px 20px 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 1em 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5em 0.2em;
   cursor: grab;
+}
+
+
+@media screen and (min-width: 800px) {
+  img {
+    width: 85%;
+  }
+
+  h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin: auto;
+  }
+
+  button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+  
+  .card-grid {
+    margin: 80px 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em 1em;
+  }
+}
+
+@media (orientation: landscape ) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .textAndButton {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .card-grid {
+    margin: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  button {
+    padding: 0;
+    margin-left: 10px;
+    height: 120px;
+  }
+
+  footer {
+    content-visibility: hidden;
+  }
 }
