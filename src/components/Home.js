@@ -13,7 +13,7 @@ const cardImages = [
   { "src": './images/mainecoon.jpg', matched: false },
   { "src": './images/manx.jpg', matched: false },
   { "src": './images/ragamuffin.jpg', matched: false },
-  { "src": './images/ragdoll.jpg', matched: false },
+  // { "src": './images/ragdoll.jpg', matched: false },
   { "src": './images/russianblue.jpg', matched: false }
 ];
 
@@ -82,10 +82,12 @@ function Home() {
 
 
   return (
-    <>
-      <h1>Match Cats!</h1>
-      <button onClick={shuffleCards}>New Game</button>
-      <p>Turns: {turns}</p>
+    <div className='container'>
+      <div className='textAndButton'>
+        <h1>Match Cats!</h1>
+        <button onClick={shuffleCards}>New Game</button>
+        <p>Turns: {turns}</p>
+      </div>
       <div className="card-grid">
         {cards.map((card, i) => {
           return (
@@ -100,7 +102,7 @@ function Home() {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }
 
