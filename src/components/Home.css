@@ -14,27 +14,32 @@ body {
   color: #EEF0EB;
 }
 
+.text {
+  margin-bottom: 40px;
+}
+
 h1 {
   font-family: 'Square Peg', sans-serif;
-  font-size: 3rem;
+  font-size: 8.5rem;
   letter-spacing: 0.2rem;
   text-align: center;
   margin-bottom: 0px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 p {
-  font-size: 1em;
+  font-size: 2em;
   color: #dea6bc;
   margin: 10px;
 }
 
 button {
   font-family: 'Fira Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #EEF0EB;
-  padding: 5px 10px;
+  padding: 20px 30px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   background: #4C86A8;
@@ -46,77 +51,38 @@ button:hover {
 }
 
 /* Cards */
-img {
-  width: 75%;
-}
 
 .card-grid {
-  margin: 10px 10px 20px 20px;
+  margin: 20px;
+  justify-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.5em 0.2em;
+  grid-template-columns: repeat(6, 12%);
+  gap: 2.5em;
   cursor: grab;
 }
 
 
-@media screen and (min-width: 800px) {
-  img {
-    width: 85%;
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 3em;
   }
 
-  h1 {
-    font-size: 6rem;
-    margin-bottom: 20px;
-    margin-top: 40px;
+  button {
+    font-size: 1em;
+    padding: 5px 10px;
   }
 
   p {
-    font-size: 1.5rem;
-    margin: auto;
+    font-size: 1em;
+    margin: 0px;
   }
 
-  button {
-    font-size: 1.5rem;
-    padding: 10px 20px;
-  }
-  
-  .card-grid {
-    margin: 80px 80px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 1em 1em;
-  }
-}
-
-@media (orientation: landscape ) {
-  .container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .textAndButton {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
+  .text {
+    margin-bottom: 5px;
   }
 
   .card-grid {
-    margin: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    padding: 10px;
-    margin-top: 20px;
-  }
-
-  button {
-    padding: 0;
-    margin-left: 10px;
-    height: 120px;
-  }
-
-  footer {
-    content-visibility: hidden;
+    grid-template-columns: repeat(3, 30%);
+    gap: 1em;
   }
 }
