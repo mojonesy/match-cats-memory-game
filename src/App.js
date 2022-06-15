@@ -10,8 +10,7 @@ function App() {
       </div>
       
       <div className="footer">
-        <footer 
-          style={{marginBottom: "30px"}}>
+        <footer>
           © Molly Jones 2022
         </footer>
       </div>
