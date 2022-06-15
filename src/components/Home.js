@@ -83,7 +83,7 @@ function Home() {
 
   return (
     <div className='container'>
-      <div className='textAndButton'>
+      <div className='text'>
         <h1>Match Cats!</h1>
         <button onClick={shuffleCards}>New Game</button>
         <p>Turns: {turns}</p>
