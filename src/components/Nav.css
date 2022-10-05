@@ -1,5 +1,5 @@
 nav ul {
-  border: #4C86A8 solid;
+  border: var(--clr-tealblue) solid;
   border-radius: 5px;
   list-style: none;
   position: absolute;
@@ -9,15 +9,14 @@ nav ul {
   padding: 5px 10px;
   margin: 10px 20px;
   text-align: left;
-  color: #ffff;
 }
 
 nav a {
-  color: #EEF0EB;
+  color: var(--clr-light);
   text-decoration: none;
 }
 nav a:hover {
-  color: #4C86A8;
+  color: var(--clr-tealblue);
 }
 
 
