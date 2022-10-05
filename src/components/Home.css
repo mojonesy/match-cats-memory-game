@@ -1,18 +1,20 @@
+:root {
+  --ff-primary: 'Square Peg', sans-serif;
+  --ff-secondary: 'Fira Sans', sans-serif;
 
-/* colors ->  
-  #4C86A8(steelblue) 
-  #477890(tealblue) 
-  #84596B(mauvetaupe) 
-  #EEF0EB(alabaster) 
-  #051923(richblackFOGRA29) 
-*/
+  --clr-dark: #051923;
+  --clr-light: #EEF0EB;
+  --clr-purple: #84596B;
+  --clr-grayblue: #477890;
+  --clr-tealblue: #4C86A8;
+}
 
 body {
   text-align: center;
   margin: 0;
   min-height: 100vh;
-  background: #051923;
-  color: #EEF0EB;
+  background: var(--clr-dark);
+  color: var(--clr-light);
 }
 
 .text {
@@ -20,7 +22,7 @@ body {
 }
 
 h1 {
-  font-family: 'Square Peg', sans-serif;
+  font-family: var(--ff-primary);
   font-size: 8.5rem;
   letter-spacing: 0.2rem;
   text-align: center;
@@ -35,20 +37,20 @@ p {
 }
 
 button {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: var(--ff-secondary);
   font-size: 2rem;
   font-weight: bold;
-  color: #EEF0EB;
+  color: var(--clr-light);
   padding: 20px 30px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
-  background: #4C86A8;
+  background: var(--clr-tealblue);
   cursor: pointer;
 }
 
 button:hover {
-  background: #477890;
+  background: var(--clr-grayblue);
 }
 
 /* Cards */
