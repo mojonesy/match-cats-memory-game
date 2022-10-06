@@ -30,3 +30,16 @@
     transform: rotateY(90deg);
     transition-delay: 0.05s;
 }
+
+
+@media screen and (max-width: 850px) {
+    .card img {
+        border: 8px solid #56334f;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card img {
+        border: 5px solid #56334f;
+    }
+}
