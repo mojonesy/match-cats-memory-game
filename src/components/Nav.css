@@ -1,28 +1,63 @@
-nav ul {
-  border: var(--clr-tealblue) solid;
-  border-radius: 5px;
-  list-style: none;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 5px 10px;
-  margin: 10px 20px;
-  text-align: left;
+.nav-toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  left: 1.75em;
+  top: 2em;
+  z-index: 1000;
 }
 
-nav a {
-  color: var(--clr-light);
-  text-decoration: none;
+.nav-open .nav {
+  transform: translateX(0);
 }
-nav a:hover {
-  color: var(--clr-tealblue);
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.125turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-12px);
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before {
+  background: var(--clr-tealblue);
+  width: 3em;
+  height: 4px;
+  border-radius: 5px;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12px;
 }
 
 
 @media screen and (max-width: 850px) {
-  nav a {
-    font-size: 0.8em;
+  .nav-toggle {
+    left: 1em;
+    top: 1em;
+  }
+
+  .hamburger,
+  .hamburger::before {
+    width: 2em;
+    height: 3px;
   }
 }
 
