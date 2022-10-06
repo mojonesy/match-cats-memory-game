@@ -83,13 +83,13 @@ function Home() {
 
 
   return (
-    <div className='container'>
-      <div>
-        <Nav />
-      </div>
-      <div className='text'>
+    <div className="container">
+      
+      <Nav />
+
+      <div className="text">
         <h1>Match Cats!</h1>
-        <button onClick={shuffleCards}>New Game</button>
+        <button className="new-game-btn" onClick={shuffleCards}>New Game</button>
         <p>Turns: {turns}</p>
       </div>
       <div className="card-grid">
