@@ -22,7 +22,12 @@
 
 .nav li { margin-bottom: 3em }
 
-.nav-link {
+.nav-link,
+button .nav-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   text-decoration: none;
   color: var(--clr-light);
   font-size: 2em;
