@@ -80,6 +80,15 @@ function Home() {
     setDisabled(false);
   }
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const isMatched = (card) => card.matched;
+  //     if (cards.every(isMatched)) {
+  //       console.log("HOORAY!");
+  //     }
+  //   }, 500);
+  // }, [cards]);
+
 
   return (
     <div className="container">
