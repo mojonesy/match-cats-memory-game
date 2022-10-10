@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import SingleCard from './SingleCard';
-import Nav from './Nav';
 import './Home.css';
 
 // Images
@@ -84,9 +83,6 @@ function Home() {
 
   return (
     <div className="container">
-      
-      <Nav />
-
       <div className="text">
         <h1>Match Cats!</h1>
         <button className="new-game-btn" onClick={shuffleCards}>New Game</button>
