@@ -2,7 +2,7 @@ import React from "react";
 import "./Nav.css";
 
 
-function Nav() {
+function Nav({ openModal }) {
 
   const openNav = () => {
     document.body.classList.toggle("nav-open");
@@ -25,9 +25,10 @@ function Nav() {
               </a>
             </li>
             <li>
-              <a className="nav-link" href="/cats">
+              {/* made this link a button because it does not use an href */}
+              <button className="nav-link" onClick={openModal}>
                 <span aria-hidden="true"></span>About the Cats
-              </a>
+              </button>
             </li>
             <li>
               <a 
