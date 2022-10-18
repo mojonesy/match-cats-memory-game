@@ -21,12 +21,15 @@
 }
 
 .modal-title {
+  background-color: var(--clr-purple);
+  border-radius: 5px;
+  padding: 5px 20px;
   margin: 0 auto;
   font-size: 55px;
   display: inline-flex;
 }
 .modal-title-text {
-  padding: 0 15px 10px;
+  padding: 0 15px 10px 0;
 }
 .cat-icon { margin-top: 5px }
 
@@ -44,14 +47,23 @@
 
 
 @media screen and (max-width: 800px) {
+  .about-modal {
+    padding: 15px 0.5em;
+  }
   .close-modal-btn { 
     font-size: 30px; 
     align-self: flex-start;
   }
+
   .modal-title { 
     font-size: 40px; 
     flex-direction: column;
     align-items: center;
+    padding: 5px 10px;
   }
 
+  .modal-title-text {
+    font-size: 0.75em;
+    padding: 0;
+  }
 }
