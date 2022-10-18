@@ -45,6 +45,7 @@
 
 .close-modal-btn:hover { color: var(--clr-purple) }
 
+/* carousel */
 .carousel {
   width: 80%;
   height: 75%;
@@ -53,6 +54,28 @@
   margin: 0 auto;
   padding: 10px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.carousel-stat { 
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.carousel-stat span:first-child { 
+  color: var(--clr-light);
+}
+
+.carousel-stat span::after {
+  content: "\a";
+  white-space: pre;
+}
+
+.carousel-image {
+  width: 30%;
+  height: fit-content;
+  border-radius: 10px;
 }
 
 
