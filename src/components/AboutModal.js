@@ -35,7 +35,10 @@ function AboutModal({ data }) {
           <span>{data[0].name}</span>
         </p>
 
-        <p className="carousel-stat">{data[0].description}</p>
+        <p className="carousel-stat">
+          <span>Description:</span>
+          <span>{data[0].description}</span>
+        </p>
 
         <p className="carousel-stat">
           <span>Origin:</span>
