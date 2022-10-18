@@ -47,34 +47,44 @@
 
 /* carousel */
 .carousel {
-  width: 80%;
+  max-width: 60%;
   height: 75%;
+  background-color: rgb(71, 120, 144, 0.4);
   border: solid var(--clr-tealblue) 7px;
   border-radius : 10px;
   margin: 0 auto;
   padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  display: grid;
+  grid-template-areas: "img p p";
+  gap: 0.7em;
 }
 
 .carousel-stat { 
   font-size: 1.5em;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  word-wrap: normal;
 }
 
 .carousel-stat span:first-child { 
   color: var(--clr-light);
 }
 
-.carousel-stat span::after {
-  content: "\a";
-  white-space: pre;
+.carousel-stat span:nth-child(2) {
+  text-align: center;
 }
 
+.carousel-stat:nth-child(3) span:nth-child(2){
+  text-align: left;
+}
+
+/* .carousel-stat span::after {
+  content: "\a";
+  white-space: pre;
+} */
+
 .carousel-image {
-  width: 30%;
-  height: fit-content;
+  max-height: 250px;
   border-radius: 10px;
 }
 
