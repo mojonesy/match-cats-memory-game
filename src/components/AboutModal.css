@@ -1,3 +1,4 @@
+/* modal */
 .about-modal { 
   display: none;
   position: fixed;
@@ -14,27 +15,30 @@
   display: block;
 }
 
-.modal-header {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin-bottom: 30px;
-}
 
+/* header */
 .modal-title {
   background-color: var(--clr-purple);
   border-radius: 5px;
-  padding: 5px 20px;
-  margin: 0 auto;
-  font-size: 55px;
-  display: inline-flex;
+  padding: 10px 5px;
+  margin: 18px auto;
+  max-width: 500px;
+  font-size: 35px;
 }
 .modal-title-text {
-  padding: 0 15px 10px 0;
+  padding: 0 15px;
 }
-.cat-icon { margin-top: 5px }
+.cat-icon { 
+  padding-top: 5px;
+  margin-right: 15px;
+  scale: 1.4;
+}
 
 .close-modal-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 7px;
   background: transparent;
   color: var(--clr-tealblue);
   border: none;
@@ -45,17 +49,19 @@
 
 .close-modal-btn:hover { color: var(--clr-purple) }
 
+
 /* carousel */
 .carousel {
-  max-width: 60%;
+  position: relative;
+  min-width: 80%;
   height: 75%;
   background-color: rgb(71, 120, 144, 0.4);
   border: solid var(--clr-tealblue) 7px;
   border-radius : 10px;
   margin: 0 auto;
   padding: 10px;
-  display: grid;
-  grid-template-areas: "img p p";
+  display: flex;
+  flex-direction: column;
   gap: 0.7em;
 }
 
@@ -83,13 +89,16 @@
   white-space: pre;
 } */
 
-.carousel-image {
-  max-height: 250px;
+.carousel-image-container { max-height: 10em }
+.carousel-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 10px;
 }
 
 
-@media screen and (max-width: 800px) {
+/* @media screen and (min-width: 800px) {
   .about-modal {
     padding: 15px 0.5em;
   }
@@ -109,4 +118,4 @@
     font-size: 0.75em;
     padding: 0;
   }
-}
+} */
