@@ -40,6 +40,11 @@ function AboutModal({ data }) {
           <span>{data[0].description}</span>
         </p>
 
+        <p className="carousel-stat temperament">
+          <span>Temperament:</span>
+          <span>{data[0].temperament}</span>
+        </p>
+
         <p className="carousel-stat origin">
           <span>Origin:</span>
           <span>{data[0].origin}</span>
@@ -63,11 +68,6 @@ function AboutModal({ data }) {
         <p className="carousel-stat life-span">
           <span>Life Span:</span>
           <span>{data[0].life_span} years</span>
-        </p>
-
-        <p className="carousel-stat temperament">
-          <span>Temperament:</span>
-          <span>{data[0].temperament}</span>
         </p>
       </div>
     </div>
