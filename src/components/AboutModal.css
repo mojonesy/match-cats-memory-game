@@ -101,15 +101,46 @@
 
 
 @media screen and (min-width: 800px) {
+  .about-modal p {
+    font-size: 1.5em;
+  }
+
   .modal-title {
-    font-size: 3.5em;
+    font-size: 2.5em;
     max-width: 600px;
     margin-bottom: 25px;
-    padding: 15px 0;
+    padding: 12px 0;
   }
 
   .close-modal-btn {
-    font-size: 60px;
+    font-size: 35px;
     margin: 20px;
   }
+
+  .carousel {
+    width: 60%;
+    height: 80%;
+    overflow: hidden;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+      "image image name origin life-span"
+      "image image description description description"
+      "energy shed intelligence temperament temperament"
+    ;
+    grid-template-columns: repeat(2, 100px) repeat(3, 1fr);
+  }
+
+  .carousel-image-container { 
+    grid-area: image;
+    height: 300px;
+  }
+  .name { grid-area: name }
+  .origin { grid-area: origin }
+  .life-span { grid-area: life-span }
+  .description { grid-area: description }
+  .energy-level { grid-area: energy }
+  .intelligence { grid-area: intelligence }
+  .shed-level { grid-area: shed }
+  .temperament { grid-area: temperament }
 }
