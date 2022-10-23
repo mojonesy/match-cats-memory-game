@@ -21,10 +21,10 @@
 .modal-title {
   background-color: var(--clr-purple);
   border-radius: 5px;
-  padding: 10px 5px;
-  margin: 18px auto;
-  max-width: 500px;
-  font-size: 35px;
+  padding: 10px 0;
+  margin: 12px auto;
+  max-width: 450px;
+  font-size: 30px;
 }
 .modal-title-text {
   padding: 0 15px;
@@ -45,7 +45,7 @@
   border: none;
   cursor: pointer;
   z-index: 10001;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .close-modal-btn:hover { color: var(--clr-purple) }
