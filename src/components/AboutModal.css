@@ -22,8 +22,8 @@
   background-color: var(--clr-purple);
   border-radius: 5px;
   padding: 10px 0;
-  margin: 12px auto;
-  max-width: 450px;
+  margin: 18px auto;
+  max-width: 350px;
   font-size: 30px;
 }
 .modal-title-text {
@@ -37,18 +37,20 @@
 
 .close-modal-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 12px;
   margin: 7px;
   background: transparent;
   color: var(--clr-tealblue);
   border: none;
   cursor: pointer;
   z-index: 10001;
-  font-size: 30px;
+  scale: 3;
 }
 
-.close-modal-btn:hover { color: var(--clr-purple) }
+.close-modal-btn:hover { 
+  color: var(--clr-purple);
+}
 
 
 /* carousel */
@@ -129,8 +131,8 @@
   }
 
   .close-modal-btn {
-    font-size: 35px;
     margin: 20px;
+    scale: 4;
   }
 
   .carousel {
