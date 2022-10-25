@@ -97,10 +97,13 @@
 .carousel-btn-right,
 .carousel-btn-left {
   position: absolute;
+  background: transparent;
+  border: none;
+  color: var(--clr-light);
   top: 50%;
   z-index: 10001;
   cursor: pointer;
-  scale: 3.5;
+  scale: 4.5;
 }
 
 .carousel-btn-right:hover,
@@ -108,7 +111,8 @@
   color: var(--clr-tealblue);
 }
 
-.carousel-btn-right { right: 6% }
+.carousel-btn-right { right: 5% }
+.carousel-btn-left { left: 5% }
 
 
 /* Desktop */
@@ -156,5 +160,12 @@
   .shed-level { grid-area: shed }
   .temperament { grid-area: temperament }
 
-  .carousel-btn-right { right: 3% }
+  .carousel-btn-left {
+    scale: 5;
+    left: 3%;
+  }
+  .carousel-btn-right {
+    scale: 5;
+    right: 3%;
+  }
 }
