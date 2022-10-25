@@ -3,10 +3,41 @@ import "./AboutModal.css";
 import { Icon } from '@iconify/react';
 
 function AboutModal({ data }) {
+  const [current, setCurrent] = useState(data[0]);
+  const [index, setIndex] = useState(0);
 
   const closeModal = () => {
     document.body.classList.toggle("modal-open");
   }
+
+  function previousCat(e) {
+    e.preventDefault();
+
+    if (current === data[0]) {
+      setIndex(data.length - 1);
+      setCurrent(data[index]);
+      console.log(index);
+    } else {
+      setIndex(prevIndex => prevIndex - 1);
+      setCurrent(data[index]);
+      console.log(index);
+    }
+  }
+
+  function nextCat(e) {
+    e.preventDefault();
+    
+    if (current === data[data.length - 1]) {
+      setIndex(data[0]);
+      setCurrent(data[index]);
+      console.log(index);
+    } else {
+      setIndex(prevIndex => prevIndex + 1);
+      setCurrent(data[index]);
+      console.log(index);
+    }
+  }
+
 
   return (
     <div className="about-modal">
@@ -25,56 +56,62 @@ function AboutModal({ data }) {
       <div className="carousel">
         <div className="carousel-image-container">
           <img
-            src={data[0].image.url}
-            alt={data[0].name}
+            src={current.image.url}
+            alt={current.name}
           />
         </div>
 
         <p className="carousel-stat name">
           <span>Name:</span>
-          <span>{data[0].name}</span>
+          <span>{current.name}</span>
         </p>
 
         <p className="carousel-stat description">
           <span>Description:</span>
-          <span>{data[0].description}</span>
+          <span>{current.description}</span>
         </p>
 
         <p className="carousel-stat temperament">
           <span>Temperament:</span>
-          <span>{data[0].temperament}</span>
+          <span>{current.temperament}</span>
         </p>
 
         <p className="carousel-stat origin">
           <span>Origin:</span>
-          <span>{data[0].origin}</span>
+          <span>{current.origin}</span>
         </p>
 
         <p className="carousel-stat energy-level">
           <span>Energy Level:</span>
-          <span>{data[0].energy_level}</span>
+          <span>{current.energy_level}</span>
         </p>
 
         <p className="carousel-stat intelligence">
           <span>Intelligence:</span>
-          <span>{data[0].intelligence}</span>
+          <span>{current.intelligence}</span>
         </p>
 
         <p className="carousel-stat shed-level">
           <span>Shed Level:</span>
-          <span>{data[0].shedding_level}</span>
+          <span>{current.shedding_level}</span>
         </p>
 
         <p className="carousel-stat life-span">
           <span>Life Span:</span>
-          <span>{data[0].life_span} years</span>
+          <span>{current.life_span} years</span>
         </p>
       </div>
 
-      <button className="carousel-btn-left">
+      <button 
+        className="carousel-btn-left"
+        onClick={previousCat}
+      >
         <Icon icon="charm:chevron-left" />
       </button>
-      <button className="carousel-btn-right">
+      <button 
+        className="carousel-btn-right"
+        onClick={nextCat}
+      >
         <Icon icon="charm:chevron-right" />
       </button>
     </div>
