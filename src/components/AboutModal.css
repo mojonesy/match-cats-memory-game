@@ -54,7 +54,7 @@
 /* carousel */
 .carousel {
   position: relative;
-  min-width: 80%;
+  max-width: 80%;
   height: 90%;
   overflow: scroll;
   background-color: rgb(71, 120, 144, 0.4);
@@ -97,12 +97,21 @@
 .carousel-btn-right,
 .carousel-btn-left {
   position: absolute;
+  top: 50%;
   z-index: 10001;
   cursor: pointer;
   scale: 3.5;
 }
 
+.carousel-btn-right:hover,
+.carousel-btn-left:hover {
+  color: var(--clr-tealblue);
+}
 
+.carousel-btn-right { right: 6% }
+
+
+/* Desktop */
 @media screen and (min-width: 800px) {
   .about-modal p {
     font-size: 1.5em;
@@ -121,7 +130,7 @@
   }
 
   .carousel {
-    width: 60%;
+    min-width: 90%;
     height: 80%;
     overflow: hidden;
     display: grid;
@@ -146,4 +155,6 @@
   .intelligence { grid-area: intelligence }
   .shed-level { grid-area: shed }
   .temperament { grid-area: temperament }
+
+  .carousel-btn-right { right: 3% }
 }
