@@ -87,16 +87,19 @@
   text-align: left;
 }
 
-/* .carousel-stat span::after {
-  content: "\a";
-  white-space: pre;
-} */
-
 .carousel-image-container { height: 15em }
 .carousel-image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.carousel-btn-right,
+.carousel-btn-left {
+  position: absolute;
+  z-index: 10001;
+  cursor: pointer;
+  scale: 3.5;
 }
 
 
