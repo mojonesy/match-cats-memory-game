@@ -70,6 +70,13 @@ function AboutModal({ data }) {
           <span>{data[0].life_span} years</span>
         </p>
       </div>
+
+      <div className="carousel-btn-left">
+        <Icon icon="charm:chevron-left" />
+      </div>
+      <div className="carousel-btn-right">
+        <Icon icon="charm:chevron-right" />
+      </div>
     </div>
   );
 }
