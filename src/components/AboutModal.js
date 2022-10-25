@@ -71,12 +71,12 @@ function AboutModal({ data }) {
         </p>
       </div>
 
-      <div className="carousel-btn-left">
+      <button className="carousel-btn-left">
         <Icon icon="charm:chevron-left" />
-      </div>
-      <div className="carousel-btn-right">
+      </button>
+      <button className="carousel-btn-right">
         <Icon icon="charm:chevron-right" />
-      </div>
+      </button>
     </div>
   );
 }
