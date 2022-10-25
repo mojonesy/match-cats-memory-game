@@ -15,7 +15,7 @@ function AboutModal({ data }) {
             aria-label="toggle about cats modal"
             onClick={closeModal}
             >
-          X
+          <Icon icon="lucide:x-square" inline={true} />
         </button>
         <h2 className="modal-title">
           <span className="modal-title-text">About the Cats</span>
