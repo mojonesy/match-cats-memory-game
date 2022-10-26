@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./AboutModal.css";
 import { Icon } from '@iconify/react';
 
-function AboutModal({ data }) {
+function AboutModal({ loading, data, error }) {
   const [current, setCurrent] = useState(data[0]);
   const [index, setIndex] = useState(0);
 
@@ -41,6 +41,9 @@ function AboutModal({ data }) {
 
   return (
     <div className="about-modal">
+        {loading && <h2>Loading...</h2>}
+        {error && <h2>{error.message}</h2>}
+
         <button 
             className="close-modal-btn" 
             aria-label="toggle about cats modal"
