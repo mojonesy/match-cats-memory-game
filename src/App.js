@@ -15,14 +15,19 @@ function App() {
     document.body.classList.toggle("nav-open");
   }
 
-  if (loading) return "Loading...";
+  if (loading) return <h2 className='loading-msg'>Loading...</h2>;
   if (error) return `Error: ${error.message}`;
   return (
     <div className="App">
+      
       <Nav openModal={openModal} />
       <Home />
-      <AboutModal data={data} />
-      
+      <AboutModal 
+        loading={loading}
+        data={data}
+        error={error} 
+      />
+
       <div className="footer">
         <footer>
           © Molly Jones 2022
