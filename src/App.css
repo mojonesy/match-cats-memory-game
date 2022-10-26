@@ -11,7 +11,8 @@
   box-sizing: inherit;
 }
 
-.loading-msg {
+.loading-msg,
+.error-msg {
   font-style: italic;
   position: fixed;
   top: 50%;

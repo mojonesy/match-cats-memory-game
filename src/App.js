@@ -16,7 +16,7 @@ function App() {
   }
 
   if (loading) return <h2 className='loading-msg'>Loading...</h2>;
-  if (error) return `Error: ${error.message}`;
+  if (error) return <h2 className='error-msg'>Error: {error.message}</h2>;
   return (
     <div className="App">
       
