@@ -10,32 +10,16 @@ function AboutModal({ loading, data, error }) {
     document.body.classList.toggle("modal-open");
   }
 
-  function previousCat(e) {
-    e.preventDefault();
-
-    if (current === data[0]) {
-      setIndex(data.length - 1);
-      setCurrent(data[index]);
-      console.log(index);
-    } else {
-      setIndex(prevIndex => prevIndex - 1);
-      setCurrent(data[index]);
-      console.log(index);
-    }
+  const next = () => {
+    setIndex(index === data.length - 1 ? 0 : index + 1);
+    setCurrent(data[index]);
+    console.log(index);
   }
 
-  function nextCat(e) {
-    e.preventDefault();
-    
-    if (current === data[data.length - 1]) {
-      setIndex(data[0]);
-      setCurrent(data[index]);
-      console.log(index);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
-      setCurrent(data[index]);
-      console.log(index);
-    }
+  const prev = () => {
+    setIndex(index === 0 ? data.length - 1 : index - 1);
+    setCurrent(data[index]);
+    console.log(index);
   }
 
 
@@ -107,13 +91,13 @@ function AboutModal({ loading, data, error }) {
 
       <button 
         className="carousel-btn-left"
-        onClick={previousCat}
+        onClick={prev}
       >
         <Icon icon="charm:chevron-left" />
       </button>
       <button 
         className="carousel-btn-right"
-        onClick={nextCat}
+        onClick={next}
       >
         <Icon icon="charm:chevron-right" />
       </button>
