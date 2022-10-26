@@ -89,18 +89,18 @@ function AboutModal({ loading, data, error }) {
         </p>
       </div>
 
-      <button 
+      <span 
         className="carousel-btn-left"
-        onClick={prev}
+        onClick={() => prev()}
       >
         <Icon icon="charm:chevron-left" />
-      </button>
-      <button 
+      </span>
+      <span 
         className="carousel-btn-right"
-        onClick={next}
+        onClick={() => next()}
       >
         <Icon icon="charm:chevron-right" />
-      </button>
+      </span>
     </div>
   );
 }
