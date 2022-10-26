@@ -3,25 +3,15 @@ import "./AboutModal.css";
 import { Icon } from '@iconify/react';
 
 function AboutModal({ loading, data, error }) {
-  const [current, setCurrent] = useState(data[0]);
   const [index, setIndex] = useState(0);
 
   const closeModal = () => {
     document.body.classList.toggle("modal-open");
   }
 
-  const next = () => {
-    setIndex(index === data.length - 1 ? 0 : index + 1);
-    setCurrent(data[index]);
-    console.log(index);
-  }
-
-  const prev = () => {
-    setIndex(index === 0 ? data.length - 1 : index - 1);
-    setCurrent(data[index]);
-    console.log(index);
-  }
-
+  const next = () => index === data.length - 1 ? setIndex(0) : setIndex(index + 1);
+  const prev = () => index === 0 ? setIndex(data.length - 1) : setIndex(index - 1);
+  console.log(index);
 
   return (
     <div className="about-modal">
@@ -43,49 +33,49 @@ function AboutModal({ loading, data, error }) {
       <div className="carousel">
         <div className="carousel-image-container">
           <img
-            src={current.image.url}
-            alt={current.name}
+            src={data[index].image.url}
+            alt={data[index].name}
           />
         </div>
 
         <p className="carousel-stat name">
           <span>Name:</span>
-          <span>{current.name}</span>
+          <span>{data[index].name}</span>
         </p>
 
         <p className="carousel-stat description">
           <span>Description:</span>
-          <span>{current.description}</span>
+          <span>{data[index].description}</span>
         </p>
 
         <p className="carousel-stat temperament">
           <span>Temperament:</span>
-          <span>{current.temperament}</span>
+          <span>{data[index].temperament}</span>
         </p>
 
         <p className="carousel-stat origin">
           <span>Origin:</span>
-          <span>{current.origin}</span>
+          <span>{data[index].origin}</span>
         </p>
 
         <p className="carousel-stat energy-level">
           <span>Energy Level:</span>
-          <span>{current.energy_level}</span>
+          <span>{data[index].energy_level}</span>
         </p>
 
         <p className="carousel-stat intelligence">
           <span>Intelligence:</span>
-          <span>{current.intelligence}</span>
+          <span>{data[index].intelligence}</span>
         </p>
 
         <p className="carousel-stat shed-level">
           <span>Shed Level:</span>
-          <span>{current.shedding_level}</span>
+          <span>{data[index].shedding_level}</span>
         </p>
 
         <p className="carousel-stat life-span">
           <span>Life Span:</span>
-          <span>{current.life_span} years</span>
+          <span>{data[index].life_span} years</span>
         </p>
       </div>
 
