@@ -60,17 +60,17 @@ function AboutModal({ loading, data, error }) {
 
         <p className="carousel-stat energy-level">
           <span>Energy Level:</span>
-          <span>{data[index].energy_level}</span>
+          <span>{data[index].energy_level}/5</span>
         </p>
 
         <p className="carousel-stat intelligence">
           <span>Intelligence:</span>
-          <span>{data[index].intelligence}</span>
+          <span>{data[index].intelligence}/5</span>
         </p>
 
         <p className="carousel-stat shed-level">
           <span>Shed Level:</span>
-          <span>{data[index].shedding_level}</span>
+          <span>{data[index].shedding_level}/5</span>
         </p>
 
         <p className="carousel-stat life-span">
