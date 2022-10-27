@@ -120,7 +120,7 @@
 /* Desktop */
 @media screen and (min-width: 800px) {
   .about-modal p {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 
   .modal-title {
@@ -138,7 +138,8 @@
   .carousel {
     min-width: 90%;
     height: 80%;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     display: grid;
     gap: 10px;
     grid-template-areas: 
