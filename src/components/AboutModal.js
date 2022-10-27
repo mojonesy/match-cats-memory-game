@@ -11,7 +11,7 @@ function AboutModal({ loading, data, error }) {
 
   const next = () => index === data.length - 1 ? setIndex(0) : setIndex(index + 1);
   const prev = () => index === 0 ? setIndex(data.length - 1) : setIndex(index - 1);
-  console.log(index);
+
 
   return (
     <div className="about-modal">
