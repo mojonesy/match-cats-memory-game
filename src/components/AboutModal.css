@@ -91,9 +91,9 @@
 
 .carousel-image-container { height: 15em }
 .carousel-image-container img {
-  width: 100%;
   height: 100%;
-  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .carousel-btn-right,
@@ -120,7 +120,7 @@
 /* Desktop */
 @media screen and (min-width: 800px) {
   .about-modal p {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .modal-title {
@@ -143,16 +143,12 @@
     gap: 10px;
     grid-template-areas: 
       "image image name origin life-span"
-      "image image description description description"
-      "energy shed intelligence temperament temperament"
+      "image image energy shed intelligence"
+      "description description description temperament temperament"
     ;
-    grid-template-columns: repeat(2, 100px) repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(100px, 215px)) repeat(3, 1fr);
   }
 
-  .carousel-image-container { 
-    grid-area: image;
-    height: 300px;
-  }
   .name { grid-area: name }
   .origin { grid-area: origin }
   .life-span { grid-area: life-span }
@@ -161,7 +157,16 @@
   .intelligence { grid-area: intelligence }
   .shed-level { grid-area: shed }
   .temperament { grid-area: temperament }
+  .carousel-image-container { 
+    grid-area: image;
+    max-width: 430px;
+    max-height: 300px;
+  }
 
+  .carousel-image-container img {
+    object-fit: cover;
+  }
+  
   .carousel-btn-left {
     scale: 5;
     left: 3%;
