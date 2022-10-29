@@ -60,9 +60,6 @@ body {
 .card-grid {
   margin: 20px 10px;
   justify-content: center;
-  /* display: grid;
-  grid-template-columns: repeat(3, clamp(4.7em, 5em, 6em));
-  gap: 0.8em; */
   display: flex;
   flex-wrap: wrap;
   gap: 0.8em;
@@ -81,30 +78,33 @@ footer {
 
 
 @media screen and (min-width: 750px) {
-  .title {
-    font-size: 4em;
-  }
+  .title { font-size: 4em }
 
   .new-game-btn {
     font-size: 1.5em;
     padding: 10px 15px;
   }
 
-  .turns-text {
-    font-size: 1.5em;
-  }
-
-  .text {
-    margin-bottom: 5px;
-  }
+  .turns-text { font-size: 1.5em }
 
   .card-grid { margin: 20px 20px }
 
-  .card {
-    flex-basis: 20%;
-  }
+  .card { flex-basis: 20% }
 
-  footer {
-    font-size: 1em;
+  footer { font-size: 1em }
+}
+
+@media screen and (min-width: 1000px) {
+  .title { font-size: 5.5em }
+
+  .new-game-btn { padding: 15px 25px }
+
+  .text { margin-bottom: 35px }
+
+  .card-grid {
+    margin: 20px 45px;
+    display: grid;
+    grid-template-columns: repeat(6, 8.5em);
+    gap: 1.5em;
   }
 }
