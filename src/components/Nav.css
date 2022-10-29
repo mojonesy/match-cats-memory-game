@@ -35,13 +35,13 @@ button .nav-link {
 .nav-link:hover { color: #3ca0cd }
 
 .nav-toggle {
-  padding: 0.5em;
+  padding: 0.2em;
   background: transparent;
   border: none;
   cursor: pointer;
   position: fixed;
-  left: 1.75em;
-  top: 2em;
+  left: 1em;
+  top: 1em;
   z-index: 1000;
 }
 
@@ -69,8 +69,8 @@ button .nav-link {
 .hamburger,
 .hamburger::before {
   background: var(--clr-tealblue);
-  width: 3em;
-  height: 4px;
+  width: 1.7em;
+  height: 2.5px;
   border-radius: 5px;
   transition: transform 250ms ease-in-out;
 }
@@ -84,16 +84,17 @@ button .nav-link {
 }
 
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 850px) {
   .nav-toggle {
-    left: 1em;
-    top: 1em;
+    padding: 0.5em;
+    left: 1.75em;
+    top: 2em;
   }
 
   .hamburger,
   .hamburger::before {
-    width: 2em;
-    height: 3px;
+    width: 3em;
+    height: 4px;
   }
 }
 
