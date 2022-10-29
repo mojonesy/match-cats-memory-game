@@ -28,11 +28,6 @@ function App() {
         error={error} 
       />
 
-      <div className="footer">
-        <footer>
-          © Molly Jones 2022
-        </footer>
-      </div>
     </div>
   );
 }
