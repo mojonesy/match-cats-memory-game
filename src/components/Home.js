@@ -93,10 +93,11 @@ function Home() {
   return (
     <div className="container">
       <div className="text">
-        <h1>Match Cats!</h1>
+        <h1 className="title">Match Cats!</h1>
         <button className="new-game-btn" onClick={shuffleCards}>New Game</button>
-        <p>Turns: {turns}</p>
+        <p className="turns-text">Turns: {turns}</p>
       </div>
+
       <div className="card-grid">
         {cards.map((card, i) => {
           return (
@@ -110,6 +111,12 @@ function Home() {
             />
           );
         })}
+      </div>
+
+      <div className="footer">
+        <footer>
+          © Molly Jones 2022
+        </footer>
       </div>
     </div>
   );
