@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SingleCard from './SingleCard';
+import FinishedOverlay from './FinishedOverlay';
 import './Home.css';
 
 // Images
@@ -23,6 +24,7 @@ function Home() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+  const [victory, setVictory] = useState(false);
 
   // Shuffle cards
   const shuffleCards = () => {
@@ -80,6 +82,9 @@ function Home() {
     setDisabled(false);
   }
 
+  const victoryScreen = () => {
+    setVictory(true);
+  }
   // useEffect(() => {
   //   setTimeout(() => {
   //     const isMatched = (card) => card.matched;
@@ -112,6 +117,8 @@ function Home() {
           );
         })}
       </div>
+
+      <FinishedOverlay />
 
       <div className="footer">
         <footer>
