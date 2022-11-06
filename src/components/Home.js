@@ -6,14 +6,14 @@ import './Home.css';
 // Images
 const cover = './images/match_cat_cover.png';
 const cardImages = [
-  { "src": './images/abyssinian.png', matched: false },
-  { "src": './images/birman.jpg', matched: false },
-  { "src": './images/chantilly.jpg', matched: false },
-  { "src": './images/chartreux.jpg', matched: false },
-  { "src": './images/devonrex.png', matched: false },
-  { "src": './images/mainecoon.jpg', matched: false },
-  { "src": './images/manx.jpg', matched: false },
-  { "src": './images/ragamuffin.jpg', matched: false },
+  // { "src": './images/abyssinian.png', matched: false },
+  // { "src": './images/birman.jpg', matched: false },
+  // { "src": './images/chantilly.jpg', matched: false },
+  // { "src": './images/chartreux.jpg', matched: false },
+  // { "src": './images/devonrex.png', matched: false },
+  // { "src": './images/mainecoon.jpg', matched: false },
+  // { "src": './images/manx.jpg', matched: false },
+  // { "src": './images/ragamuffin.jpg', matched: false },
   // { "src": './images/ragdoll.jpg', matched: false },
   { "src": './images/russianblue.jpg', matched: false }
 ];
@@ -24,7 +24,7 @@ function Home() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const [victory, setVictory] = useState(false);
+  const [matched, setMatched] = useState(0);
 
   // Shuffle cards
   const shuffleCards = () => {
@@ -57,6 +57,7 @@ function Home() {
         setCards(prevCards => {
           return prevCards.map(card => {
             if (card.src === choiceOne.src) {
+              setMatched(matched + 1);
               return { ...card, matched: true };
             } else {
               return card;
@@ -82,18 +83,6 @@ function Home() {
     setDisabled(false);
   }
 
-  const victoryScreen = () => {
-    setVictory(true);
-  }
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     const isMatched = (card) => card.matched;
-  //     if (cards.every(isMatched)) {
-  //       console.log("HOORAY!");
-  //     }
-  //   }, 500);
-  // }, [cards]);
-
 
   return (
     <div className="container">
@@ -118,7 +107,11 @@ function Home() {
         })}
       </div>
 
-      <FinishedOverlay />
+      <FinishedOverlay 
+        matched={matched} 
+        setMatched={setMatched}
+        shuffleCards={shuffleCards}
+      />
 
       <div className="footer">
         <footer>
