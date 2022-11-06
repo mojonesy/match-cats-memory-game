@@ -1,9 +1,7 @@
 .overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    padding: 20px 15px;
+    inset: 0;
     z-index: 100;
     color: var(--clr-light);
     animation: overlay-grow 500ms forwards;
@@ -11,6 +9,7 @@
 
 .overlay-text {
     position: relative;
+    padding: 10px;
     top: 10%;
     display: flex;
     flex-direction: column;
@@ -22,24 +21,24 @@
     margin: 0 auto;
 }
 
-.cat-icon {
-    font-size: 3.5em;
-    padding-left: 30px;
+.cat-icon-smile {
+    font-size: 3.2em;
+    padding-top: 45px;
 }
 
 .overlay h2 { 
     color: var(--clr-tealblue);
-    font-size: 4em;
+    font-size: 2em;
     margin-bottom: 0.1em;
 }
 .overlay p {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-top: 0;
 }
 
 .overlay-restart-btn {
     color: var(--clr-light);
-    font-size: 1.2em;
+    font-size: 1em;
     background-color: var(--clr-purple);
     border: none;
     border-radius: 10px;
@@ -64,5 +63,26 @@
     to {
         background-color: rgba(0, 0, 0, 0.8);
         font-size: 1.5em;
+    }
+}
+
+@media(min-width: 800px) {
+    .cat-icon-smile {
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+
+    .overlay h2 {
+        font-size: 4em;
+    }
+
+    .overlay p {
+        font-size: 1.5em;
+    }
+
+    .overlay-restart-btn {
+        font-size: 1.2em;
+        width: 8.5em;
+        padding: 15px 25px;
     }
 }
