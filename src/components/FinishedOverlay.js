@@ -29,7 +29,7 @@ function FinishedOverlay({ matched, setMatched, shuffleCards }) {
           <div className="overlay-text">
             <div className="overlay-heading">
               <h2>Woohoo!</h2>
-              <Icon className="cat-icon" icon="fluent-emoji:grinning-cat-with-smiling-eyes" />
+              <Icon className="cat-icon-smile" icon="fluent-emoji:grinning-cat-with-smiling-eyes" />
             </div>
             <p>You matched the cats! Want to play again?</p>
             <button 
