@@ -16,6 +16,17 @@
     flex-direction: column;
 }
 
+.overlay-heading {
+    display: inline-flex;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+.cat-icon {
+    font-size: 3.5em;
+    padding-left: 30px;
+}
+
 .overlay h2 { 
     color: var(--clr-tealblue);
     font-size: 4em;
