@@ -6,14 +6,14 @@ import './Home.css';
 // Images
 const cover = './images/match_cat_cover.png';
 const cardImages = [
-  // { "src": './images/abyssinian.png', matched: false },
-  // { "src": './images/birman.jpg', matched: false },
-  // { "src": './images/chantilly.jpg', matched: false },
-  // { "src": './images/chartreux.jpg', matched: false },
-  // { "src": './images/devonrex.png', matched: false },
-  // { "src": './images/mainecoon.jpg', matched: false },
-  // { "src": './images/manx.jpg', matched: false },
-  // { "src": './images/ragamuffin.jpg', matched: false },
+  { "src": './images/abyssinian.png', matched: false },
+  { "src": './images/birman.jpg', matched: false },
+  { "src": './images/chantilly.jpg', matched: false },
+  { "src": './images/chartreux.jpg', matched: false },
+  { "src": './images/devonrex.png', matched: false },
+  { "src": './images/mainecoon.jpg', matched: false },
+  { "src": './images/manx.jpg', matched: false },
+  { "src": './images/ragamuffin.jpg', matched: false },
   // { "src": './images/ragdoll.jpg', matched: false },
   { "src": './images/russianblue.jpg', matched: false }
 ];
