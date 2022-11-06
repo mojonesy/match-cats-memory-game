@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ConfettiExplosion from "react-confetti-explosion";
+import { Icon } from "@iconify/react";
 import "./FinishedOverlay.css";
 
 function FinishedOverlay({ matched, setMatched, shuffleCards }) {
@@ -26,7 +27,10 @@ function FinishedOverlay({ matched, setMatched, shuffleCards }) {
         {victory &&
           <div id="overlay" className="overlay">
           <div className="overlay-text">
-            <h2>Woohoo!</h2>
+            <div className="overlay-heading">
+              <h2>Woohoo!</h2>
+              <Icon className="cat-icon" icon="fluent-emoji:grinning-cat-with-smiling-eyes" />
+            </div>
             <p>You matched the cats! Want to play again?</p>
             <button 
                 className="overlay-restart-btn"
@@ -36,7 +40,7 @@ function FinishedOverlay({ matched, setMatched, shuffleCards }) {
             </button>
           </div>
 
-          <div style={{transform: "translateX(600px)"}}>
+          <div className="confetti" style={{transform: "translateX(50%)"}}>
             <ConfettiExplosion 
               force={0.6}
               duration={5000}
