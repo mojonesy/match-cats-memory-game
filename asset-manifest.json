@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/match-cats-memory-game/static/css/main.b9ec7a8e.css",
-    "main.js": "/match-cats-memory-game/static/js/main.b51add60.js",
+    "main.js": "/match-cats-memory-game/static/js/main.05791c28.js",
     "index.html": "/match-cats-memory-game/index.html",
     "main.b9ec7a8e.css.map": "/match-cats-memory-game/static/css/main.b9ec7a8e.css.map",
-    "main.b51add60.js.map": "/match-cats-memory-game/static/js/main.b51add60.js.map"
+    "main.05791c28.js.map": "/match-cats-memory-game/static/js/main.05791c28.js.map"
   },
   "entrypoints": [
     "static/css/main.b9ec7a8e.css",
-    "static/js/main.b51add60.js"
+    "static/js/main.05791c28.js"
   ]
 }
