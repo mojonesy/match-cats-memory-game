@@ -20,7 +20,7 @@ function Nav({ openModal }) {
         <nav className="nav">
           <ul className="primary-nav flex">
             <li className="active">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="https://mojonesy.github.io/match-cats-memory-game/">
                 <span aria-hidden="true"></span>Home
               </a>
             </li>
