@@ -1,4 +1,5 @@
 {
+  "homepage": "https://mojonesy.github.io/match-cats-memory-game/",
   "name": "match-cats-memory-game",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +8,7 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.2",
+    "gh-pages": "^4.0.0",
     "lottie-web": "^5.9.6",
     "react": "^18.2.0",
     "react-confetti-explosion": "^1.5.1",
@@ -19,6 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
