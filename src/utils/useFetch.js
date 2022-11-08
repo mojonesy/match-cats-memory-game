@@ -23,6 +23,8 @@ export function useFetch() {
       return () => {
         controller.abort();
       };
+
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return { loading, data, error };
