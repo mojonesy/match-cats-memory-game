@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@iconify/react": "^4.0.0"
+    "@iconify/react": "^4.0.0",
+    "source-map-loader": "^4.0.1"
   }
 }
