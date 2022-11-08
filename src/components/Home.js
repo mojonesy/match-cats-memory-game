@@ -4,18 +4,18 @@ import FinishedOverlay from './FinishedOverlay';
 import './Home.css';
 
 // Images
-const cover = './images/match_cat_cover.png';
+const cover = require('../images/match_cat_cover.png');
 const cardImages = [
-  { "src": './images/abyssinian.png', matched: false },
-  { "src": './images/birman.jpg', matched: false },
-  { "src": './images/chantilly.jpg', matched: false },
-  { "src": './images/chartreux.jpg', matched: false },
-  { "src": './images/devonrex.png', matched: false },
-  { "src": './images/mainecoon.jpg', matched: false },
-  { "src": './images/manx.jpg', matched: false },
-  { "src": './images/ragamuffin.jpg', matched: false },
-  // { "src": './images/ragdoll.jpg', matched: false },
-  { "src": './images/russianblue.jpg', matched: false }
+  { "src": require('../images/abyssinian.png'), matched: false },
+  { "src": require('../images/birman.jpg'), matched: false },
+  { "src": require('../images/chantilly.jpg'), matched: false },
+  { "src": require('../images/chartreux.jpg'), matched: false },
+  { "src": require('../images/devonrex.png'), matched: false },
+  { "src": require('../images/mainecoon.jpg'), matched: false },
+  { "src": require('../images/manx.jpg'), matched: false },
+  { "src": require('../images/ragamuffin.jpg'), matched: false },
+  // { "src": require('../images/ragdoll.jpg'), matched: false },
+  { "src": require('../images/russianblue.jpg'), matched: false }
 ];
 
 function Home() {
@@ -72,6 +72,8 @@ function Home() {
         }, 1050);
       }
     }
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [choiceOne, choiceTwo]);
   // console.log(cards);
 
