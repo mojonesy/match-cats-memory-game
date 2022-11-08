@@ -5,6 +5,7 @@ import "./FinishedOverlay.css";
 
 function FinishedOverlay({ matched, setMatched, shuffleCards }) {
   const [victory, setVictory] = useState(false);
+  // eslint-disable-next-line
   const [isExploding, setIsExploding] = useState(false);
 
   useEffect(() => {
