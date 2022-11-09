@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/match-cats-memory-game/static/css/main.b9ec7a8e.css",
-    "main.js": "/match-cats-memory-game/static/js/main.05791c28.js",
+    "main.css": "/match-cats-memory-game/static/css/main.222fb559.css",
+    "main.js": "/match-cats-memory-game/static/js/main.0ce5c892.js",
+    "static/media/chantilly.jpg": "/match-cats-memory-game/static/media/chantilly.46f2a807865907aa0411.jpg",
+    "static/media/ragamuffin.jpg": "/match-cats-memory-game/static/media/ragamuffin.97ad2a90aac8d7483d6d.jpg",
+    "static/media/abyssinian.png": "/match-cats-memory-game/static/media/abyssinian.41a769e779a5a61283eb.png",
+    "static/media/devonrex.png": "/match-cats-memory-game/static/media/devonrex.bfceb2ad84b502e0c4b4.png",
+    "static/media/mainecoon.jpg": "/match-cats-memory-game/static/media/mainecoon.08111531189097afe55a.jpg",
+    "static/media/chartreux.jpg": "/match-cats-memory-game/static/media/chartreux.3941bb69ff785c3a773b.jpg",
+    "static/media/birman.jpg": "/match-cats-memory-game/static/media/birman.1748ac9809f15a504c13.jpg",
+    "static/media/russianblue.jpg": "/match-cats-memory-game/static/media/russianblue.fcb937d7a8eb3f3f42b6.jpg",
+    "static/media/match_cat_cover.png": "/match-cats-memory-game/static/media/match_cat_cover.d6e65f0931c01c006849.png",
+    "static/media/manx.jpg": "/match-cats-memory-game/static/media/manx.69f08ac3364fee48ee27.jpg",
     "index.html": "/match-cats-memory-game/index.html",
-    "main.b9ec7a8e.css.map": "/match-cats-memory-game/static/css/main.b9ec7a8e.css.map",
-    "main.05791c28.js.map": "/match-cats-memory-game/static/js/main.05791c28.js.map"
+    "main.222fb559.css.map": "/match-cats-memory-game/static/css/main.222fb559.css.map",
+    "main.0ce5c892.js.map": "/match-cats-memory-game/static/js/main.0ce5c892.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9ec7a8e.css",
-    "static/js/main.05791c28.js"
+    "static/css/main.222fb559.css",
+    "static/js/main.0ce5c892.js"
   ]
 }
