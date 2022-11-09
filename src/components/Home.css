@@ -41,10 +41,10 @@ body {
 
 .new-game-btn {
   font-family: var(--ff-secondary);
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: var(--clr-light);
-  padding: 5px 10px;
+  padding: 5px 12px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
@@ -63,12 +63,18 @@ body {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8em;
+  gap: 0.6em;
   cursor: grab;
 }
 
 .card { 
-  flex-basis: 5em;
+  flex-basis: 5.2em;
+}
+
+@media (min-width: 470px) {
+  .card {
+    flex-basis: 6em;
+  }
 }
 
 /* Footer */
@@ -95,17 +101,17 @@ footer {
   footer { font-size: 1em }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1150px) {
   .title { font-size: 5.5em }
 
   .new-game-btn { padding: 15px 25px }
 
-  .text { margin-bottom: 35px }
+  .text { margin-bottom: 0 }
 
   .card-grid {
     margin: 20px 45px;
     display: grid;
-    grid-template-columns: repeat(6, 8.5em);
-    gap: 1.5em;
+    grid-template-columns: repeat(6, 10em);
+    gap: 1.2em;
   }
 }
