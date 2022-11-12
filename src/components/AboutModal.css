@@ -91,12 +91,12 @@
 
 .carousel-image-container { 
   height: 15em;
-  object-fit: cover;
 }
 .carousel-image-container img {
   height: 100%;
   margin: 0 auto;
   border-radius: 10px;
+  object-fit: contain;
 }
 
 .carousel-btn-right,
@@ -166,10 +166,6 @@
     grid-area: image;
     max-width: 430px;
     max-height: 300px;
-  }
-
-  .carousel-image-container img {
-    object-fit: cover;
   }
   
   .carousel-btn-left {
